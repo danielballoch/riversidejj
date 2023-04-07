@@ -12,11 +12,11 @@ background-color: black;
 background: linear-gradient(0deg, rgba(41, 40, 100, 0.9), rgba(41, 40, 100, 0.9)), url(${GymBackground});
 /* background-position: center; */
 background-repeat: repeat; 
-background-size: 960px;
+background-size: 50vw;
 .content {
     background-color: rgba(255,255,255,1);
     padding: 100px 30px;
-    max-width: 900px;
+    max-width: 47vw;
     height: 100%;
     margin: auto;
     h1 {

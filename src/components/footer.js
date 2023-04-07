@@ -85,16 +85,16 @@ export default function Footer(){
                         </div>
                     </div>
                     <div className="footer-items">
-                        <a href="#"><h3>Home</h3></a>
-                        <a href="#timetable"><h3>Classes</h3></a>
-                        <a href="#memberships"><h3>Memberships</h3></a>
-                        <a href="#"><h3>Contact</h3></a>
+                        <a href="/#home"><h3>Home</h3></a>
+                        <a href="/#timetable"><h3>Classes</h3></a>
+                        <a href="/#memberships"><h3>Memberships</h3></a>
+                        <a href="/contact"><h3>Contact</h3></a>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Website Built by thoughtfulHQ</a>
+                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <a target="_blank" attribute href="https://www.thoughtfulhq.com/">Website Built by thoughtfulHQ</a>
             </div>
         </FooterWrapper>
     )

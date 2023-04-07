@@ -1,6 +1,7 @@
 import React from "react"
 import styled from '@emotion/styled'
 import Jack from "../images/Jack.jpg"
+import Grit from "../images/grit.png"
 
 const MembershipsWrapper = styled.div`
 display: flex;
@@ -65,6 +66,9 @@ h1, h2, p {
 .text-content{
     width: 700px;
     padding-left: 70px;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
 }
 .trial-content {
     margin-top: 60px;
@@ -100,12 +104,12 @@ export default function Memberships(){
                     <div className="membership-div">
                         <h2>Single Day Membership: $20 per Week</h2>
                         <p>This membership allows you to attend any classes at Riverside Jiu Jitsu for one day per week.</p>
-                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83"><button className="button-6">Sign Up</button></a>
+                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6">Sign Up</button></a>
                     </div>
                     <div className="membership-div">
                         <h2>Full Membership: $30 per Week</h2>
                         <p>This membership allows you to attend all classes at Riverside Jiu Jitsu.</p>
-                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83"><button className="button-6">Sign Up</button></a>
+                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6">Sign Up</button></a>
                     </div>
                 </div>
             </div>

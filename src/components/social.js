@@ -20,6 +20,9 @@ div {
     text-align: center;
     padding: 40px;
     color: #222222;
+    h1,p {
+        margin: 10px;
+    }
     a {
         color: #292864;
         text-decoration: none;
@@ -45,22 +48,22 @@ export default function Social({blue}){
         <Marquee>
             <SocialWrapper className={blue? "blue": "blue"}>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/">@riversidejj</a> on Instagram</h1>
+                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/">@riversidejj</a> on Instagram</h1>
+                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/">@riversidejj</a> on Instagram</h1>
+                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/">@riversidejj</a> on Instagram</h1>
+                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>

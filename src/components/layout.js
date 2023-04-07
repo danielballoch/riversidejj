@@ -9,10 +9,10 @@ padding: 0;
 font-family: 'helvetica', sans-serif; 
 `
 
-export default function Layout({ children }) {
+export default function Layout({ children, InvertNav }) {
   return (
     <Wrapper>
-        <Navbar/>
+        <Navbar invert={InvertNav}/>
         {children}
         <Footer/>
     </Wrapper>

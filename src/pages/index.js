@@ -43,7 +43,7 @@ img {
 const IndexPage = () => {
   return (
     <Layout>
-    <Hero>
+    <Hero id="home">
         <Video videoSrcURL={HeroVideo} videoTitle="Riverside Hero Video"/>
         <div style={{
                     gridArea: "1/1",
