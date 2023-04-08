@@ -12,7 +12,8 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 img {
-   height: 400px;
+   max-width: 350px;
+   width: 90%;
    margin: 0 20px;
 }
 .footer-main {
@@ -28,6 +29,9 @@ align-items: center;
     flex-direction: row;
     color: white;
     font-size: 18px;
+    div {
+        margin: 20px;
+    }
     a {
         color: white;
         text-decoration: none;
@@ -36,25 +40,23 @@ align-items: center;
         margin-top: -20px;
         margin-bottom: 20px;
     }
-    
     div:nth-of-type(2){
         margin-left: 40px;
+        justify-content: center;
     }
         
-    
     :last-of-type{
-
-    h3 {
-        margin-right: 40px;
+        h3 {
+            margin: 20px;
+        }
     }
-    
-}
     
 }
 .footer-bottom {
     margin: auto;
     height: 50px;
     jusify-content: center;
+    flex-wrap: wrap;
     a {
         margin: 20px;
         color: white;
@@ -64,6 +66,43 @@ align-items: center;
 .footer-sub {
     display: flex;
     flex-direction: column;
+}
+@media(max-width: 1000px){
+    .footer-main {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        /* flex-direction: column; */
+    }
+    .footer-sub {
+        .footer-items {
+            margin: 0 auto;
+            display: flex;
+            a {
+                h3 {
+                    margin: 0;
+                }
+            }
+            div {
+                max-width: 200px;
+                width: 100%;
+                /* width: 50%; */
+            }
+            :last-of-type {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 40px 0;
+                a {
+                    padding: 10px;
+                }
+            }
+        }
+    }
 }
 `
 

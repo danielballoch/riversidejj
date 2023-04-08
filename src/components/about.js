@@ -29,6 +29,20 @@ background-size: 50vw;
         line-height: 24px;
     }
 }
+@media(max-width: 900px){
+    .content {
+        h1 {
+            font-size: 40px;
+        }
+    }
+}
+@media(max-width: 750px){
+    .content {
+        max-width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
 `
 
 

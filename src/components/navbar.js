@@ -51,7 +51,12 @@ z-index: 100;
             }
         }
        
+}
+@media(max-width: 600px){
+    .nav-items {
+        width: 100%;
     }
+}
 `
 
 export default function Navbar({invert}){

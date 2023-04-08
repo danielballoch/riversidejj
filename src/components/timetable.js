@@ -1,5 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
+import timetable from "../images/timetable.jpg"
 
 const TimetableWrapper = styled.div`
 height: 100%;
@@ -90,6 +91,54 @@ justify-content: center;
     margin: 10px 0;
     .class-text {font-size: 1em; color: #333333; margin: 1px;}
     .time-text {font-size: 1.2em; margin: 1px;}
+}
+@media(max-width: 1150px){
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    .day-column {
+        /* flex-direction: row; */
+        /* margin: 10px auto; */
+        .content-div {
+            padding: 0;
+            margin: 0;
+            /* flex-direction: row; */
+            .times-div {
+                height: fit-content;
+                margin: 0 2px 2px 2px;
+                padding: 8px;
+                :last-of-type {
+                    height: 100%;
+                }
+            }
+        }
+        .title-div {
+            height: fit-content;
+            width: 250px;
+            padding: 0;
+            h2 {
+                font-size: 22px;
+                width: fit-content;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+@media(max-width: 540px){
+.day-column {
+    min-width: 150px;
+    width: 45%;
+    margin: 5px;
+    .title-div {
+        min-width: 150px;
+        width: 100%;
+    }
+}
+}
+@media(max-width: 315px){
+    .day-column {
+        width: 90%;
+    }
 }
 `
 
