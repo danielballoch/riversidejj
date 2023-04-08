@@ -1,5 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 
 const Nav = styled.div`
 position: absolute;
@@ -33,7 +34,7 @@ z-index: 100;
     }
 }
 .invert {
-        background-color: white;
+        /* background-color: white; */
         color: black;
         a {
             color: black;
@@ -59,10 +60,10 @@ export default function Navbar({invert}){
     return(
         <Nav>
             <div className={invert? "nav-items invert" : "nav-items"}>
-                <a href="/#home">Home</a>
-                <a href="/#timetable">Classes</a>
-                <a href="/#memberships">Sign Up</a>
-                <a href="/contact">Contact</a>
+                <Link to="/#home">Home</Link>
+                <Link to="/#timetable">Classes</Link>
+                <Link to="/#memberships">Sign Up</Link>
+                <Link to="/contact">Contact</Link>
             </div>
         </Nav>
     )

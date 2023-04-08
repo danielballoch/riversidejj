@@ -1,5 +1,6 @@
 import React from "react"
 import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 import logo from "../images/cover.png"
 
 const FooterWrapper = styled.div`
@@ -124,15 +125,15 @@ export default function Footer(){
                         </div>
                     </div>
                     <div className="footer-items">
-                        <a href="/#home"><h3>Home</h3></a>
-                        <a href="/#timetable"><h3>Classes</h3></a>
-                        <a href="/#memberships"><h3>Memberships</h3></a>
-                        <a href="/contact"><h3>Contact</h3></a>
+                        <Link to="/#home"><h3>Home</h3></Link>
+                        <Link to="/#timetable"><h3>Classes</h3></Link>
+                        <Link to="/#memberships"><h3>Memberships</h3></Link>
+                        <Link to="/contact#contact"><h3>Contact</h3></Link>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <a href="/terms-and-conditions">Terms & Conditions</a>
+                <Link to="/terms-and-conditions#terms">Terms & Conditions</Link>
                 <a target="_blank" attribute href="https://www.thoughtfulhq.com/">Website Built by thoughtfulHQ</a>
             </div>
         </FooterWrapper>

@@ -13,7 +13,7 @@ margin: 0 auto 100px auto;
 const IndexPage = () => {
   return (
     <Layout InvertNav={true}>
-        <TermsWrapper>
+        <TermsWrapper id="terms">
             <h1>Terms & Conditions</h1>
             <div>
             <p>Welcome to our website! Here are the terms and conditions that apply to your use of our website. By using our website, you agree to these terms and conditions. Please read them carefully.</p>
