@@ -6,4 +6,11 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    
+}
+@media(max-width: 800px){
+    .marquee-container .overlay::before, .overlay::after{
+        /* background: none!important; */
+        width: 50px!important;
+    }
 }

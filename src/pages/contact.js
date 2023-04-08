@@ -15,7 +15,7 @@ const ContactPage = () => {
     <Layout InvertNav={true}>
         <ContactWrapper>
             <h1>Contact</h1>
-            <p>If you have any questions for the RiversideJJ team please email <a href="mailto:riversidejiiujitsu@gmail.com">riversidejiiujitsu@gmail.com</a>, jump on instagram and send us a message <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a>, or fill out the form below and we'll get back to you shortly!</p>
+            <p>If you have any questions for the Riverside Jiu Jitsu team please email <a href="mailto:riversidejiiujitsu@gmail.com">riversidejiiujitsu@gmail.com</a>, follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on instagram and send us a message, or fill out the form below and we'll get back to you shortly!</p>
         </ContactWrapper>
     </Layout>
   )
@@ -23,4 +23,4 @@ const ContactPage = () => {
 
 export default ContactPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Contact | Riverside Jiu Jitsu</title>

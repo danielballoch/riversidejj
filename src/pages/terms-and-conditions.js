@@ -45,4 +45,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Terms & Conditions | Riverside Jiu Jitsu</title>
