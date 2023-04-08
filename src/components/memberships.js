@@ -106,6 +106,7 @@ h1 {
 @media(max-width: 800px){
 h1 {
     font-size: 50px;
+    margin-top: 40px;
 }
 .memberships-content {
     flex-wrap: wrap;
