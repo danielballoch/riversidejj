@@ -16,7 +16,9 @@ z-index: 100;
     height: 100%;
     color: white;
     font-size: 18px;
-    div {
+    a {
+        color: white;
+        text-decoration: none;
         height: 100%;
         width: 100%;
         display: flex;
@@ -29,27 +31,20 @@ z-index: 100;
             border-top: 30px solid rgba(255,255,255,1);
         }
     }
-    a {
-        color: white;
-        text-decoration: none;
-    }
 }
 .invert {
         background-color: white;
         color: black;
-        div {
-            a {
-                color: black;
-                transition: .3s;
-            }
+        a {
+            color: black;
+            transition: .3s;
             :hover {
-                cursor: pointer;
-                border-top: 30px solid rgba(41, 40, 100,1);
-                a {
-                    color: rgb(41, 40, 100);
-                }
-            }
+            cursor: pointer;
+            border-top: 30px solid rgba(41, 40, 100,1);
+            color: rgb(41, 40, 100);
         }
+        }
+        
        
 }
 @media(max-width: 600px){
@@ -64,10 +59,10 @@ export default function Navbar({invert}){
     return(
         <Nav>
             <div className={invert? "nav-items invert" : "nav-items"}>
-                <div><a href="/#home">Home</a></div>
-                <div><a href="/#timetable">Classes</a></div>
-                <div><a href="/#memberships">Sign Up</a></div>
-                <div><a href="/contact">Contact</a></div>
+                <a href="/#home">Home</a>
+                <a href="/#timetable">Classes</a>
+                <a href="/#memberships">Sign Up</a>
+                <a href="/contact">Contact</a>
             </div>
         </Nav>
     )
