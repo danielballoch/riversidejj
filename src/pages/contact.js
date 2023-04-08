@@ -107,7 +107,7 @@ const ContactPage = () => {
   return (
     <Layout InvertNav={true}>
         <ContactWrapper id="contact">
-            <form name="Contact Form" method="POST" data-netlify="true">
+            <form name="Contact Form" method="POST" data-netlify="true" action="/contact-success">
                 <input type="hidden" name="form-name" value="Contact Form" />
                 <h1>Contact Us</h1>
                 <p>If you have any questions for the Riverside Jiu Jitsu team please email: <a href="mailto:riversidejiiujitsu@gmail.com">riversidejiiujitsu@gmail.com</a>, follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram and send us a message, or fill out the form below and we'll get back to you shortly!</p>
