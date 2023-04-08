@@ -40,13 +40,32 @@ span {
     width: 40px;
     height: 10px;
 }
+@media(max-width: 750px){
+    div {
+        width: 180px;
+        padding: 20px 0;
+        h1 {
+            font-size: 25px;
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    }
+    span {
+        width: 30px;
+        margin: 5px;
+        opacity: 0;
+    }
+    
+}
 `
 
 
-export default function Social({blue}){ 
+export default function Social(){ 
     return(
         <Marquee>
-            <SocialWrapper className={blue? "blue": "blue"}>
+            <SocialWrapper>
                 <div>
                     <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
