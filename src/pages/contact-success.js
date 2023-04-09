@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from '@emotion/styled'
 import Layout from "../components/layout"
+import { Link } from "gatsby"
 
 const ContactSuccessWrapper = styled.div`
 background-color: #e4e4e4;
@@ -45,7 +46,7 @@ const ContactSuccessPage = () => {
         <ContactSuccessWrapper id="contact-success">
             <div>
                 <h1>Your Message Has Been Sent!</h1>
-                <p>If you have any other questions for the Riverside Jiu Jitsu team please email: <a href="mailto:riversidejiiujitsu@gmail.com">riversidejiiujitsu@gmail.com</a>, follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram and send us a message, or fill out the form on the contact page.</p>
+                <p>If you have any other questions for the Riverside Jiu Jitsu team please email: <a href="mailto:riversidejiiujitsu@gmail.com" target="_blank">riversidejiiujitsu@gmail.com</a>, follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram and send us a message, or fill out the form on the <Link to="/contact">contact page</Link>.</p>
                 <hr/>
                 <p>Thanks for getting in touch! We'll get back to you as soon as possible.</p>
             </div>

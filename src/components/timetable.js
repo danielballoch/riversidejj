@@ -1,6 +1,8 @@
-import React from "react"
+import React, {useRef, useEffect} from "react"
 import styled from '@emotion/styled'
 import timetable from "../images/timetable.jpg"
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const TimetableWrapper = styled.div`
 height: 100%;
@@ -97,6 +99,7 @@ justify-content: center;
     justify-content: center;
     flex-direction: row;
     .day-column {
+        
         /* flex-direction: row; */
         /* margin: 10px auto; */
         .content-div {
@@ -144,6 +147,23 @@ justify-content: center;
 
 
 export default function Timetable(){
+    gsap.registerPlugin(ScrollTrigger);
+        const main = useRef(null);
+        useEffect(() => {
+          const element1 = main.current;
+          let scrollSettings = {
+            trigger: "#timetable",
+            start: "top bottom",
+            end: "center center",
+            scrub: true
+          };
+          gsap.fromTo(element1.querySelector(".column0"),{opacity: 1, x: -200},{opacity: 1, x: 0, scrollTrigger: scrollSettings});
+          gsap.fromTo(element1.querySelector(".column1"),{opacity: 1, x: -50,},{opacity: 1, x: 0, scrollTrigger: scrollSettings});
+          gsap.fromTo(element1.querySelector(".column2"),{opacity: 1, x: 0,},{opacity: 1, x: 0, scrollTrigger: scrollSettings});
+          gsap.fromTo(element1.querySelector(".column3"),{opacity: 1, x: 50,},{opacity: 1, x: 0, scrollTrigger: scrollSettings});
+          gsap.fromTo(element1.querySelector(".column4"),{opacity: 1, x: 200,},{opacity: 1, x: 0, scrollTrigger: scrollSettings});
+          gsap.fromTo(element1.querySelector(".title-div"),{color: "black"},{color:"white", scrollTrigger: scrollSettings});
+        }, []);
     const DaysArray = [
         {title: "MONDAY", content: [["NO-GI FUNDAMENTALS", "5:30 - 6:00PM"],["NO-GI", "6:00 - 7:00PM"],["ROLLING", "7:00 - 8:00PM"]]},
         {title: "TUESDAY", content: [["NO-GI FUNDAMENTALS", "5:30 - 6:00PM"],["NO-GI", "6:00 - 7:00PM"],["ROLLING", "7:00 - 8:00PM"]]},
@@ -153,9 +173,9 @@ export default function Timetable(){
     ]
     console.log(DaysArray)
     return(
-        <TimetableWrapper id="timetable">
-            {DaysArray.map((Day) => 
-                <div className="day-column">
+        <TimetableWrapper id="timetable" ref={main}>
+            {DaysArray.map((Day,i) => 
+                <div className={"day-column column"+i}>
                     <div className="title-div">
                         <h2>{Day.title}</h2>
                     </div>

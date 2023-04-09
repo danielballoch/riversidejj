@@ -1,7 +1,9 @@
-import React from "react"
+import React, {useRef, useLayoutEffect} from "react"
+import { gsap } from 'gsap';
 import styled from '@emotion/styled'
 import Jack from "../images/Jack.jpg"
 import Grit from "../images/grit.png"
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const MembershipsWrapper = styled.div`
 display: flex;
@@ -75,9 +77,11 @@ h1, h2, p {
 }
 .trial-content {
     margin-top: 60px;
+    overflow: hidden;
 }
 .memberships-content {
 display: flex;
+overflow: hidden;
 }
 .membership-div {
     width: 350px;
@@ -120,11 +124,40 @@ h1 {
 
 
 export default function Memberships(){
+    gsap.registerPlugin(ScrollTrigger);
+    const membershipRef = useRef(null);
+        useLayoutEffect(() => {
+            let ctx = gsap.context(() => {
+                const element2 = membershipRef.current;
+                let scrollSettings1 = {
+                    trigger: ".title",
+                    start: "center bottom",
+                    toggleActions: "play none none reverse",
+                    markers: true
+                };
+                let scrollSettings2 = {
+                    trigger: ".trial-content",
+                    start: "center bottom",
+                    toggleActions: "play none none reverse",
+                    markers: true
+                };
+                let scrollSettings3 = {
+                    trigger: ".memberships-content",
+                    start: "center bottom",
+                    toggleActions: "play none none reverse",
+                    markers: true
+                };
+                gsap.fromTo(element2.querySelector(".title"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings1});
+                gsap.fromTo(element2.querySelector(".trial-content"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings2});
+                gsap.fromTo(element2.querySelector(".memberships-content"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
+            });
+            return () => ctx.revert(); // <- cleanup!
+    }, []);
     return(
-        <MembershipsWrapper id="memberships">
-            <img src={Jack}/>
-            <div className="text-content">
-                <h1>Membership Options</h1>
+        <MembershipsWrapper id="memberships" >
+            <img src={Jack} onLoad={() => ScrollTrigger.refresh()}/>
+            <div className="text-content" ref={membershipRef}>
+                <h1 className="title">Membership Options</h1>
                 <div className="trial-content">
                     <h2>Free Trial: First Week Free</h2>
                     <p>We believe that everyone can benefit from practicing Jiu Jitsu, regardless of age or fitness level. That's why we are proud to offer a free trial to anyone who is interested in joining our community. You'll have the opportunity to experience our classes firsthand and see why so many people have fallen in love with this amazing martial art.</p>
