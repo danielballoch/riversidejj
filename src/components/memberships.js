@@ -147,9 +147,12 @@ export default function Memberships(){
                     toggleActions: "play none none reverse",
                     markers: true
                 };
-                gsap.fromTo(element2.querySelector(".title"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings1});
-                gsap.fromTo(element2.querySelector(".trial-content"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings2});
-                gsap.fromTo(element2.querySelector(".memberships-content"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
+                setTimeout(()=>{
+                    gsap.fromTo(element2.querySelector(".title"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings1});
+                    gsap.fromTo(element2.querySelector(".trial-content"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings2});
+                    gsap.fromTo(element2.querySelector(".memberships-content"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
+                },1000)
+                
             });
             return () => ctx.revert(); // <- cleanup!
     }, []);
