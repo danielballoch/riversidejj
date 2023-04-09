@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from "react"
+import React, {useRef, useLayoutEffect} from "react"
 import styled from '@emotion/styled'
 import GymBackground from "../images/full-gym.jpg"
 import { gsap } from 'gsap';
@@ -51,7 +51,8 @@ background-size: 50vw;
 export default function About(){
         gsap.registerPlugin(ScrollTrigger);
         const ref = useRef(null);
-        useEffect(() => {
+        useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
           const element = ref.current;
           let scrollT = {
             trigger: element.querySelector(".first"),
@@ -77,6 +78,8 @@ export default function About(){
                     }
             }
           );
+        })
+        return () => ctx.revert(); // <- cleanup!
         }, []);
     return(
         <AboutWrapper id="about" ref={ref} className="first">

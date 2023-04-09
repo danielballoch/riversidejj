@@ -133,19 +133,19 @@ export default function Memberships(){
                     trigger: ".title",
                     start: "center bottom",
                     toggleActions: "play none none reverse",
-                    markers: true
+                    // markers: true
                 };
                 let scrollSettings2 = {
                     trigger: ".trial-content",
                     start: "center bottom",
                     toggleActions: "play none none reverse",
-                    markers: true
+                    // markers: true
                 };
                 let scrollSettings3 = {
                     trigger: ".memberships-content",
                     start: "center bottom",
                     toggleActions: "play none none reverse",
-                    markers: true
+                    // markers: true
                 };
                 setTimeout(()=>{
                     gsap.fromTo(element2.querySelector(".title"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings1});
