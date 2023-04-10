@@ -13,12 +13,15 @@ const IndexPage = ({location}) => {
     useEffect(()=> {
         const timetable = document.getElementById("timetable");
         const memberships = document.getElementById("memberships");
+        const home = document.getElementById("home");
         setTimeout(()=>{
-            if(location.state && location.state.from === "#timetable"){
+            if(location.state && location.state.to === "#timetable"){
                 timetable.scrollIntoView()
                 // timetableRef.current.scrollIntoView()
-            } else if (location.state && location.state.from === "#memberships"){
+            } else if (location.state && location.state.to === "#memberships"){
                 memberships.scrollIntoView()
+            } else if (location.state && location.state.to === "#home"){
+                home.scrollIntoView()
             }
         },
             100

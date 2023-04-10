@@ -143,9 +143,9 @@ export default function Footer(){
                         </div>
                     </div>
                     <div className="footer-items">
-                        <Link to="/#home"><h3>Home</h3></Link>
-                        <Link to="/#timetable" state={{from: "#timetable"}}><h3>Classes</h3></Link>
-                        <Link to="/#memberships" state={{from: "#memberships"}}><h3>Memberships</h3></Link>
+                        <Link to="/#home" state={{to: "#home"}}><h3>Home</h3></Link>
+                        <Link to="/#timetable" state={{to: "#timetable"}}><h3>Classes</h3></Link>
+                        <Link to="/#memberships" state={{to: "#memberships"}}><h3>Memberships</h3></Link>
                         <Link to="/contact#contact"><h3>Contact</h3></Link>
                     </div>
                 </div>
