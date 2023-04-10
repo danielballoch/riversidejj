@@ -14,10 +14,10 @@ const IndexPage = ({location}) => {
         const timetable = document.getElementById("timetable");
         const memberships = document.getElementById("memberships");
         setTimeout(()=>{
-            if(location.state.from === "#timetable"){
+            if(location.state && location.state.from === "#timetable"){
                 timetable.scrollIntoView()
                 // timetableRef.current.scrollIntoView()
-            } else if (location.state.from === "#memberships"){
+            } else if (location.state && location.state.from === "#memberships"){
                 memberships.scrollIntoView()
             }
         },
