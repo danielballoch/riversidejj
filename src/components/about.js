@@ -5,7 +5,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const AboutWrapper = styled.div`
-opacity: 0;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -17,6 +16,7 @@ background: linear-gradient(0deg, rgba(41, 40, 100, 0.9), rgba(41, 40, 100, 0.9)
 background-repeat: repeat; 
 background-size: 50vw;
 .content {
+    opacity: 0;
     background-color: rgba(255,255,255,1);
     padding: 100px 30px;
     max-width: 47vw;
