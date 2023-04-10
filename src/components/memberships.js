@@ -96,6 +96,9 @@ overflow: hidden;
     width: 300px;
     margin: 40px 0;
     padding: 10px;
+    a {
+        text-decoration: none;
+    }
 }
 .membership-div:nth-of-type(2){
     margin-left: auto;
@@ -164,7 +167,13 @@ export default function Memberships(){
                     // markers: true
                 };
                 let scrollSettings3 = {
-                    trigger: ".memberships-content",
+                    trigger: ".m1",
+                    start: "center bottom",
+                    toggleActions: "play none none reverse",
+                    // markers: true
+                };
+                let scrollSettings4 = {
+                    trigger: ".m2",
                     start: "center bottom",
                     toggleActions: "play none none reverse",
                     // markers: true
@@ -172,7 +181,8 @@ export default function Memberships(){
                 setTimeout(()=>{
                     gsap.fromTo(element2.querySelector(".title"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings1});
                     gsap.fromTo(element2.querySelector(".trial-content"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings2});
-                    gsap.fromTo(element2.querySelector(".memberships-content"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
+                    gsap.fromTo(element2.querySelector(".m1"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
+                    gsap.fromTo(element2.querySelector(".m2"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings4});
                 },1000)
                 
             });
@@ -189,12 +199,12 @@ export default function Memberships(){
                     <p>No sign up required, just come down to 3 Rawhiti Street, Frankton Hamilton at 5:30 or 6 Monday-Thursday (in shorts and a teeshirt or athletic gear) and our coaches will help you get started on you Jiu Jitsu journey.</p>
                 </div>
                 <div className="memberships-content">
-                    <div className="membership-div">
+                    <div className="membership-div m1">
                         <h3>Single Day Membership: <br/>$20 per Week</h3>
                         <p>This membership allows you to attend any classes at Riverside Jiu Jitsu for one day per week.</p>
                         <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6"><b>SIGN UP</b></button></a>
                     </div>
-                    <div className="membership-div">
+                    <div className="membership-div m2">
                         <h3>Full Membership: <br/>$30 per Week</h3>
                         <p>This membership allows you to attend all classes at Riverside Jiu Jitsu.</p>
                         <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6"><b>SIGN UP</b></button></a>
