@@ -183,7 +183,7 @@ export default function Memberships(){
                     gsap.fromTo(element2.querySelector(".trial-content"),{opacity: 0, x: -10},{opacity: 1, x: 0, scrollTrigger: scrollSettings2});
                     gsap.fromTo(element2.querySelector(".m1"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings3});
                     gsap.fromTo(element2.querySelector(".m2"),{opacity: 0, x: -10,},{opacity: 1, x: 0, scrollTrigger: scrollSettings4});
-                },1000)
+                },100)
                 
             });
             return () => ctx.revert(); // <- cleanup!

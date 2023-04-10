@@ -133,19 +133,19 @@ export default function Footer(){
                 <div className="footer-sub">
                     <div className="footer-items">
                         <div>
-                            <a href="#"><h3>Address:</h3></a>
-                            <a href="#">3 Rawhiti Street, Frankton<br/>Hamilton, 3204<br/>New Zealand</a>
+                            <a target="_blank" href="https://www.google.com/maps/place/Riverside+Jiu+Jitsu/@-37.7869399,175.2603274,17z/data=!3m1!4b1!4m6!3m5!1s0x6d6d2331ef56eb03:0x7ea91b5554cd6dce!8m2!3d-37.7869442!4d175.2651983!16s%2Fg%2F11s5_lc7mb"><h3>Address:</h3></a>
+                            <a target="_blank" href="https://www.google.com/maps/place/Riverside+Jiu+Jitsu/@-37.7869399,175.2603274,17z/data=!3m1!4b1!4m6!3m5!1s0x6d6d2331ef56eb03:0x7ea91b5554cd6dce!8m2!3d-37.7869442!4d175.2651983!16s%2Fg%2F11s5_lc7mb">3 Rawhiti Street, Frankton<br/>Hamilton, 3204<br/>New Zealand</a>
                         </div>
                         <div>
-                            <a href="#"><h3>Open Hours:</h3></a>
-                            <a href="#">Mon - Thur: 5.30 pm – 9:00 pm</a><br/>
-                            <a href="#">Saturday: 10am (Confirmed weekly)</a>
+                            <a><h3>Open Hours:</h3></a>
+                            <a>Mon - Thur: 5.30 pm – 9:00 pm</a><br/>
+                            <a>Saturday: 10am (Confirmed weekly)</a>
                         </div>
                     </div>
                     <div className="footer-items">
                         <Link to="/#home"><h3>Home</h3></Link>
-                        <Link to="/#timetable"><h3>Classes</h3></Link>
-                        <Link to="/#memberships"><h3>Memberships</h3></Link>
+                        <Link to="/#timetable" state={{from: "#timetable"}}><h3>Classes</h3></Link>
+                        <Link to="/#memberships" state={{from: "#memberships"}}><h3>Memberships</h3></Link>
                         <Link to="/contact#contact"><h3>Contact</h3></Link>
                     </div>
                 </div>
