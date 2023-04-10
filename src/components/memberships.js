@@ -95,7 +95,7 @@ overflow: hidden;
 .membership-div {
     width: 300px;
     margin: 40px 0;
-    padding: 10px;
+    /* padding: 10px; */
     a {
         text-decoration: none;
     }
