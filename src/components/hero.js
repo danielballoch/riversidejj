@@ -12,7 +12,8 @@ background-color: black;
 div {
     /* max-height: 100vh; */
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,.7);
+    /* background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, rgba(0,0,0,.9) 100%); */
     opacity: 1;
     img {
         mix-blend-mode: lighten;

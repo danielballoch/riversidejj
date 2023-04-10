@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const AboutWrapper = styled.div`
+/* border-top: 10px solid white; */
 display: flex;
 flex-direction: row;
 align-items: center;
