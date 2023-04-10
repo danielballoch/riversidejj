@@ -30,6 +30,7 @@ align-items: center;
     flex-direction: row;
     color: white;
     font-size: 18px;
+    
     div {
         margin: 20px;
     }
@@ -49,7 +50,9 @@ align-items: center;
     :last-of-type{
         h3 {
             margin: 20px;
+            font-weight: 400;
         }
+        
     }
     
 }
@@ -97,13 +100,28 @@ align-items: center;
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
+                
                 margin: 40px 0;
                 a {
+                    text-align: center;
+                    /* flex-basis: 50%; */
+
                     padding: 10px;
                 }
+                
             }
         }
     }
+}
+@media(max-width: 412px){
+.footer-sub {
+    :last-of-type {
+        a {
+            flex-basis: 70%;
+        }
+        
+    }
+}
 }
 `
 
@@ -111,7 +129,7 @@ export default function Footer(){
     return(
         <FooterWrapper>
             <div className="footer-main">
-                <img src={logo}/>
+                <img src={logo} alt="Riverside Jiu Jitsu Logo"/>
                 <div className="footer-sub">
                     <div className="footer-items">
                         <div>

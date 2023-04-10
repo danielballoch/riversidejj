@@ -43,7 +43,7 @@ export default function Hero(){
                     display: "grid",
                     maxHeight: "100%"
                     }}>
-            <img src={LogoCover}/>
+            <img src={LogoCover} alt="Riverside Jiu Jitsu Logo"/>
         </div>
     </HeroWrapper>
     )

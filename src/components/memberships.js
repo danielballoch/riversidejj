@@ -11,11 +11,18 @@ flex-direction: row;
 align-items: center;
 z-index: 100;
 background-color: #292864;
-h1 {
+/* br {
+    display: none;
+} */
+h2 {
     font-size: 70px;
     margin: 0;
 }
-h1, h2, p {
+h3 {
+    font-size: 24px;
+    margin: 0;
+}
+h2, h3, p {
     color: white;
 }
 .button-6 {
@@ -35,7 +42,9 @@ h1, h2, p {
   line-height: 1.25;
   margin: 0;
   min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
+  padding: 25px;
+  width: 300px;
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -43,7 +52,7 @@ h1, h2, p {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
-  width: auto;
+  /* width: auto; */
 }
 
 .button-6:hover,
@@ -84,11 +93,12 @@ display: flex;
 overflow: hidden;
 }
 .membership-div {
-    width: 350px;
-    margin-top: 40px;
+    width: 300px;
+    margin: 40px 0;
+    padding: 10px;
 }
 .membership-div:nth-of-type(2){
-    margin-left: 40px;
+    margin-left: auto;
 }
 img {
     max-width: 700px;
@@ -103,21 +113,33 @@ flex-direction: column;
 img {
     height: 70vh;
 }
-h1 {
+h2 {
     margin: 0;
 }
 }
 @media(max-width: 800px){
-h1 {
+br {
+    display: block;
+}
+h2 {
+    text-align: center;
     font-size: 50px;
     margin-top: 40px;
 }
+.trial-content {
+    text-align: center;
+}
 .memberships-content {
     flex-wrap: wrap;
+    text-align: center;
     /* flex-direction: column; */
 }
 .membership-div:nth-of-type(2){
-    margin: 40px 0 0 0;
+    margin: 40px 0 40px 0;
+}
+.button-6 {
+    padding: 25px 60px;
+    width: 90%;
 }
 }
 `
@@ -157,25 +179,25 @@ export default function Memberships(){
             return () => ctx.revert(); // <- cleanup!
     }, []);
     return(
-        <MembershipsWrapper id="memberships" >
-            <img src={Jack} onLoad={() => ScrollTrigger.refresh()}/>
+        <MembershipsWrapper >
+            <img src={Jack} onLoad={() => ScrollTrigger.refresh()} alt="Riverside Jiu Jitsu Crew In Training Room"/>
             <div className="text-content" ref={membershipRef}>
-                <h1 className="title">Membership Options</h1>
+                <h2 className="title" id="memberships">Membership Options</h2>
                 <div className="trial-content">
-                    <h2>Free Trial: First Week Free</h2>
+                    <h3>Free Trial: First Week Free</h3>
                     <p>We believe that everyone can benefit from practicing Jiu Jitsu, regardless of age or fitness level. That's why we are proud to offer a free trial to anyone who is interested in joining our community. You'll have the opportunity to experience our classes firsthand and see why so many people have fallen in love with this amazing martial art.</p>
                     <p>No sign up required, just come down to 3 Rawhiti Street, Frankton Hamilton at 5:30 or 6 Monday-Thursday (in shorts and a teeshirt or athletic gear) and our coaches will help you get started on you Jiu Jitsu journey.</p>
                 </div>
                 <div className="memberships-content">
                     <div className="membership-div">
-                        <h2>Single Day Membership: $20 per Week</h2>
+                        <h3>Single Day Membership: <br/>$20 per Week</h3>
                         <p>This membership allows you to attend any classes at Riverside Jiu Jitsu for one day per week.</p>
-                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6">Sign Up</button></a>
+                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6"><b>SIGN UP</b></button></a>
                     </div>
                     <div className="membership-div">
-                        <h2>Full Membership: $30 per Week</h2>
+                        <h3>Full Membership: <br/>$30 per Week</h3>
                         <p>This membership allows you to attend all classes at Riverside Jiu Jitsu.</p>
-                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6">Sign Up</button></a>
+                        <a href="https://oc.debitsuccess.com/DirectEntry/DirectDebitRequest/Form?brandtemplateid=9958909c-2551-4d41-a8f3-3a02db65af83" target="_blank"><button className="button-6"><b>SIGN UP</b></button></a>
                     </div>
                 </div>
             </div>

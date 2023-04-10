@@ -63,7 +63,7 @@ form {
   line-height: 1.25;
   margin: 0;
   min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  padding: 25px calc(1.5rem - 1px);
   position: relative;
   text-decoration: none;
   transition: all 250ms;
@@ -122,7 +122,7 @@ const ContactPage = () => {
                     <label>Message: <br/><textarea name="message"></textarea></label>
                 </p>
                 <p>
-                    <button type="submit" className="button-6">Send Message</button>
+                    <button type="submit" className="button-6"><b>SEND MESSAGE</b></button>
                 </p>
             </form>
             

@@ -20,7 +20,10 @@ div {
     text-align: center;
     padding: 40px;
     color: #222222;
-    h1,p {
+    h2 {
+        font-size: 30px;
+    }
+    h2,p {
         margin: 10px;
     }
     a {
@@ -44,7 +47,7 @@ span {
     div {
         width: 180px;
         padding: 20px 0;
-        h1 {
+        h2 {
             font-size: 25px;
             margin: 0;
         }
@@ -67,22 +70,22 @@ export default function Social(){
         <Marquee>
             <SocialWrapper>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
+                    <h2>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h2>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
+                    <h2>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h2>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
+                    <h2>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h2>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>
                 <div>
-                    <h1>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h1>
+                    <h2>Follow <a href="https://www.instagram.com/riversidejj/" target="_blank">@riversidejj</a> on Instagram</h2>
                     <p>Open Mat Confirmations, Gym Updates & BJJ Content</p>
                 </div>
                 <span/>

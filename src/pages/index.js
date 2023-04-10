@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect} from "react"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
@@ -8,7 +8,24 @@ import Social from "../components/social.js"
 
 
 
-const IndexPage = () => {
+const IndexPage = ({location}) => {
+    
+    useEffect(()=> {
+        const timetable = document.getElementById("timetable");
+        const memberships = document.getElementById("memberships");
+        setTimeout(()=>{
+            if(location.state.from === "#timetable"){
+                timetable.scrollIntoView()
+                // timetableRef.current.scrollIntoView()
+            } else if (location.state.from === "#memberships"){
+                memberships.scrollIntoView()
+            }
+        },
+            100
+        )
+        
+    })
+
   return (
     <Layout>
     <Hero/>

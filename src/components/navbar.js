@@ -57,12 +57,13 @@ z-index: 100;
 
 export default function Navbar({invert}){
     console.log(invert)
+    
     return(
         <Nav>
             <div className={invert? "nav-items invert" : "nav-items"}>
                 <Link to="/#home">Home</Link>
-                <Link to="/#timetable">Classes</Link>
-                <Link to="/#memberships">Sign Up</Link>
+                <Link to="/#timetable" state={{from: "#timetable"}}>Classes</Link>
+                <Link to="/#memberships" state={{from: "#memberships"}}>Sign Up</Link>
                 <Link to="/contact">Contact</Link>
             </div>
         </Nav>
