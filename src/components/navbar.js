@@ -61,10 +61,10 @@ export default function Navbar({invert}){
     return(
         <Nav>
             <div className={invert? "nav-items invert" : "nav-items"}>
-                <Link to="/#home">Home</Link>
-                <Link to="/#timetable" state={{from: "#timetable"}}>Classes</Link>
-                <Link to="/#memberships" state={{from: "#memberships"}}>Sign Up</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/#home">HOME</Link>
+                <Link to="/#timetable" state={{from: "#timetable"}}>CLASSES</Link>
+                <Link to="/#memberships" state={{from: "#memberships"}}>SIGN UP</Link>
+                <Link to="/contact">CONTACT</Link>
             </div>
         </Nav>
     )
